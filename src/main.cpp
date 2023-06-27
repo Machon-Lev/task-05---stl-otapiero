@@ -1,11 +1,13 @@
 #include <iostream>
 #include <exception>
+#include "App.h"
 
 int main()
 {
 	try
 	{
-		throw std::exception();
+		App app;
+		app.run();
 	}
 	catch (std::exception& e)
 	{

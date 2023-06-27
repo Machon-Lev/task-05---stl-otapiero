@@ -1,1 +1,1 @@
-﻿target_sources (Task06 PRIVATE "main.cpp"  "DataExtractor.cpp" "Cities.cpp" "App.cpp" "City.cpp")
+﻿target_sources (Task06 PRIVATE "main.cpp"  "DataExtractor.cpp" "Cities.cpp" "App.cpp" "NearbyCity.cpp")

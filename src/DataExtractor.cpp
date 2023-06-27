@@ -1,6 +1,8 @@
 #include "DataExtractor.h"
 #include <iostream>
 #include <fstream>
+#include <filesystem>
+
 
 DataExtractor::DataExtractor(const std::string& path) : path(path)
 {
@@ -17,9 +19,15 @@ std::unordered_map<std::string, Coordinates> DataExtractor::getCities()
 	return cities;
 }
 
+
+
+
 void DataExtractor::extractData()
 {
+	
 	std::ifstream file(path, std::ios::in);
+
+
 	if (!file.is_open())
 	{
 		throw std::exception("File not found");
@@ -46,7 +54,7 @@ void DataExtractor::extractData()
 		auto result = cities.insert(std::make_pair(city_name, city_coordinates));
 		if (!result.second)
 		{
-			throw std::runtime_error("Duplicate city name");
+			//std::cout <<"Duplicate city name: " + city_name<< std::endl;
 		}
 
 	}

@@ -13,6 +13,7 @@ class App
 		App();
 		~App();
 		void run();
+		void printNearbyCities(std::string city_name, float radius, int distance_norm);
 
 
 
